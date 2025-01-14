@@ -38,5 +38,35 @@ public class PrimitiveTypes {
         // short: 16 bits
         short minShortValue = Short.MIN_VALUE; // -32768
         short maxShortValue = Short.MAX_VALUE; // 32767
+
+        // long: 64 bits
+        long minLongValue = Long.MIN_VALUE; // -9223372036854775808
+        long maxLongValue = Long.MAX_VALUE; // 9223372036854775807
+
+        // Need to add suffix "L" define long value
+        long longValue = 2_147_483_647_032L;
+
+        // Declaring variable in one line
+        // Same data type
+        byte firstByteValue = -128, secondByteValue = -127;
+        // Differnet data type
+        short firstShortValue = -32768; int firstIntegerValue = -2147483648;
+
+        // CASTING
+        // Error: incompatible types: possible lossy conversion from int to byte
+        byte testValue = (minByteValue / 2); // -128 / 2
+        // Solution:
+        byte testValue = (byte) (minByteValue / 2); // -128 / 2
+
+        // CHALLENGE
+        byte byteValue = 5;
+        short shortValue = 10;
+        int intValue = 15;
+        long longValue = 50_000L + 10 * ( byteValue + shortValue + intValue );
+
+        // COMPOUND ASSIGNMENT OPERATOR CHALLENGE
+        int result = 10;
+        result -= 5;
+        System.out.print("Result: " + result);
     }
 }
